@@ -1,0 +1,101 @@
+/* Aspectos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #474747;
+    color: white;
+    margin: 0 auto;
+    vertical-align: middle;
+}
+
+/* HEADER */
+.header {
+    height: 50px;
+    width: 200px;
+    margin: 30px;
+    background-color: steelblue;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+.header__a {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.8rem;
+    color: aliceblue;
+    text-decoration: none;
+}
+
+/* MAIN */
+.main {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 80vh;
+}
+
+.main__title-container {
+    width: 100%;
+    height: 10%;
+    margin: 50px 5px 50px 5px;
+    text-align: center;
+}
+
+.main__links {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+    & > h3 {
+        background-color: steelblue;
+        padding: 16px 12px;
+        border-radius: 10px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+
+        & > a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.2rem;
+            margin: 10px;
+        }
+    }
+}
+
+/* Footer */
+.footer {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10vh;
+    background-color: #000000;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+
+    & a {
+        color: white;
+        text-decoration: none;
+    }
+}
+
+/* Ejercicio #2*/
+.ejercicio2__container {
+    display: flex;
+    justify-content: center;
+}
+
+/* Ejercicio #3*/
+.ejercicio3__container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
