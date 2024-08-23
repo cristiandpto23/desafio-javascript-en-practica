@@ -19,21 +19,23 @@
                         <div style="display: flex; flex-direction: column; gap: 8px">
                             <label> Nombre completo </label>
                             <input id="nombre" type="text" />
-                            <p class="errorNombre" style="color: red; font-style: italic;"></p>
+                            <p class="errorNombre" style="color: red; font-style: italic"></p>
                         </div>
-                        <div style="display: flex; flex-direction: column; gap: 10px;">
+                        <div style="display: flex; flex-direction: column; gap: 10px">
                             <label> Asunto </label>
                             <input id="asunto" type="text" />
-                            <p class="errorAsunto" style="color: red; font-style: italic;"></p>
+                            <p class="errorAsunto" style="color: red; font-style: italic"></p>
                         </div>
                     </div>
-                    <div style="display: flex; flex-direction: column; gap: 10px;">
+                    <div style="display: flex; flex-direction: column; gap: 10px">
                         <label> Mensaje </label>
                         <textarea id="mensaje"></textarea>
-                        <p class="errorMensaje" style="color: red; font-style: italic;"></p>
+                        <p class="errorMensaje" style="color: red; font-style: italic"></p>
                     </div>
-                    <div style="margin: 10px; text-align: center;">
-                        <button style="border-radius: 8px; padding: 8px;" id="botton" type="submit">Envíar mensaje</button>
+                    <div style="margin: 10px; text-align: center">
+                        <button style="border-radius: 8px; padding: 8px" id="botton" type="submit">
+                            Envíar mensaje
+                        </button>
                     </div>
                 </form>
             </div>
@@ -54,19 +56,21 @@
             function validar(nombre, asunto, mensaje) {
                 let pasamosLaValidacion = true;
                 limpiarErrores();
-                let validacion = /[a-zA-Z]/gim;
+                let validacionNombre = /^[a-zA-ZÀ-ÿ\s]{1,100}$/gim;
+                let validacionAsunto = /^[a-zA-ZÀ-ÿ\s]{1,100}$/gim;
+                let validacionMensaje = /[a-zA-ZÀ-ÿ\s]{1,100}$/gim;
 
-                if (validacion.test(nombre) == false) {
+                if (validacionNombre.test(nombre) == false) {
                     document.querySelector(".errorNombre").innerHTML = "El nombre es requerido.";
                     pasamosLaValidacion = false;
                 }
 
-                if (validacion.test(asunto) == false) {
+                if (validacionAsunto.test(asunto) == false) {
                     document.querySelector(".errorAsunto").innerHTML = "El mensaje es requerido.";
                     pasamosLaValidacion = false;
                 }
 
-                if (validacion.test(mensaje) == false) {
+                if (validacionMensaje.test(mensaje) == false) {
                     document.querySelector(".errorMensaje").innerHTML = "El mensaje es requerido.";
                     pasamosLaValidacion = false;
                 }
